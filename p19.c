@@ -16,5 +16,10 @@ int main(void) {
     rank = a[i] / 10;
     if (0 <= rank && rank <= 10) histogram[rank]++;
   }
-  for (i = 0; i <= 10; i++) printf("%3d -  :%3d\n", i * 10, histogram[i]);
+  for (i = 0; i <= 10; i++)
+    if (i == 10) {
+      printf("%3d        :%3d\n", i * 10, histogram[i]);
+    } else {
+      printf("%3d - %3d  :%3d\n", i * 10, i * 10 + 9, histogram[i]);
+    }
 }
