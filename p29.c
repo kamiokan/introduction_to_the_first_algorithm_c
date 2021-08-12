@@ -30,5 +30,5 @@ int main(void) {
   printf("\n");
 }
 int irnd(int n) {  // 1~nの乱数
-  return (int)(arc4random() / (RAND_MAX + 0.1) * n + 1);
+  return (int)(arc4random_uniform(n) + 1);
 }
