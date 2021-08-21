@@ -12,7 +12,7 @@ int main(void) {
   int k;
   double a, b, n, h, x, s, sum;
 
-  printf("微分区間 A,B ? ");
+  printf("積分区間 A,B ? ");
   scanf("%lf %lf", &a, &b);
 
   n = 50;           // a~b間の分割数
