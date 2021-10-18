@@ -1,6 +1,6 @@
 /*
  * -------------------------
- * クイックソート
+ * クイックソート（数列の中央を軸にする）
  * -------------------------
  */
 #include <stdio.h>
@@ -19,10 +19,14 @@ int main(void) {
   printf("\n");
 }
 void quick(int a[], int left, int right) {
-  int s, t, i, j;
+  int s, t, i, j, m;
 
   if (left < right) {
-    s=a[left];
+    m = (left + right) / 2;
+    t = a[m];
+    a[m] = a[left];
+    a[left] = t;
+    s = a[left];
     i = left;
     j = right + 1;
     while (1) {
